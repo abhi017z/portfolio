@@ -1,0 +1,327 @@
+@import url('https://fonts.googleapis.com/css2?family=Radio+Canada+Big:ital,wght@0,400..700;1,400..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Sixtyfour+Convergence&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&family=Quicksand:wght@300..700&display=swap');
+
+
+* {
+  margin: 0;
+  border: 0;
+  font-family: 'Titillium', sans-serif;
+  box-sizing:border-box;
+}
+a{
+  color:black;
+  font-size:larger;
+  font-family: 'Radio Canada Big', sans-serif;
+  font-weight: 600;
+  font-style:italic;
+}
+.fullpage {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  backdrop-filter: blur(10px);
+  background-color: rgba(0,0,0,0.4);
+  overflow-x: hidden;
+}
+
+.nav{
+  display:flex;
+  position: absolute;
+  align-items: center;
+  right:0;
+  left: 0;
+  height: 4.5vw;
+  background-color: #faebeb;
+  z-index: 999;
+  opacity:93%;
+}
+.pfp{
+  position: absolute;
+  left:1vw;
+  height:3vw;
+  width:3vw;
+  border-radius: 50%;
+  background-image: url("pfp.jpg");
+  background-position: center;
+  background-size:cover;
+  
+}
+.name{
+  position: absolute;
+  left:5vw;
+  color:#02104b;
+  font-family: 'Rubik', sans-serif;
+  font-size: 1.3vw;
+  font-weight: 500;
+}
+.contact{
+  position:absolute;
+  right:2vw;
+  font-family:'Rubik', sans-serif;
+  padding:0.6vw;
+  font-weight: 600;
+  background-color: white;
+  color:#010b32;
+  cursor:pointer;
+  border-radius: 0.5vw;
+  border: 1px #010b32 solid;
+  transition: 0.3s ease-in-out;
+}
+.contact:hover{
+  background-color: #050942;
+  color: whitesmoke;
+}
+.main {
+  position: relative;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height:100vh;
+  z-index: -1;
+  background-color: rgba(0,0,0,0.8);  
+  overflow-x: hidden;
+}
+
+.bgvid{
+  position: absolute;
+  right:0;
+  overflow-y: hidden;
+  bottom:0;
+  z-index:2;
+}
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height:100vh;
+  width: 100vw;
+  border-radius: 2vw;
+  background-color:none;
+  z-index: 9;
+  font-size:4rem;
+  color:white;
+  font-family:"Quicksand", sans-serif;
+}
+.text{
+  font-weight: 600;
+  background:linear-gradient(to bottom right,#efe4e1, #d62f05, #4935e3);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.container{
+  display: flex;
+  position:relative;
+  height:150vh;
+  width:100vw;
+  background-color: #f5e1d6;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.project{
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  height: max-content;
+  width: 100vw;
+  background-color: #f5e1d6;
+  color:white;
+}
+.title{
+  position: relative;
+  left:7vw;
+  height:fit-content;
+  width:fit-content;
+  font-family:  'Titillium', sans-serif;
+  font-size: 2.5em;
+  z-index:99;
+  background: linear-gradient(to right,#010b32, #ff4b0f);
+  font-weight: 600;
+  border-bottom: 2px solid #707070;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.pro1{
+  position: relative;
+  height:50vh;
+  width:40vw;
+  border-radius: 2vh;
+  background-image: url("images/project1.png");
+  background-size:cover;
+  background-position:center;
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 30%;
+}
+
+.pro2{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  font-size: large;
+  border-bottom: 3px solid #707070;
+  height:50vh;
+  font-family:'Rubik', sans-serif;
+  width:40vw;
+  color:#494746;
+  animation: scroll linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 30%;
+}
+.arrow{
+  position: relative;
+  margin-left: 3px;
+  margin-top: 2px;
+  cursor:pointer;
+}
+b{
+  font-size: xx-large;
+  height: fit-content;
+}
+.project2{
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  margin-top: 5vh;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 50vh;
+  width: 100vw;
+  background-color: #f5e1d6;
+  color:white;
+}
+.proj{
+  position: relative;
+  height:50vh;
+  width:40vw;
+  border-radius: 2vh;
+  background-image: url("images/project2.png");
+  background-size:cover;
+  background-position:left;
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 30%;
+}
+.aboutme{
+  display:flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 50vh;
+  width:100vw;
+  background: linear-gradient(to bottom left,#f96f24, #050505, #0b1166);
+}
+.aboutpic{
+  height:200px;
+  width:200px;
+  border-radius: 50%;
+  background-image: url("images/me.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.about{
+  color:#d6d1d1;
+  width:45vw;
+  font-family: 'Titillium', sans-serif;
+  font-size: larger; 
+  letter-spacing: 0.08em;
+}
+@keyframes appear{
+  from{
+    opacity:0;
+    transform: translateX(-100px);
+  }
+  to{
+    opacity:1;
+    transform: translateX(0px);
+  }
+}
+@keyframes scroll{
+  from{
+    opacity:0;
+    transform: translateX(500px);
+  }
+  to{
+    opacity:1;
+    transform: translateX(0px);
+  }
+}
+@media(min-aspect-ratio:16/9){
+  .bgvid{
+    width:100%;
+    height:auto;
+  }
+}
+@media(max-aspect-ratio:16/9){
+  .bgvid{
+    width:auto;
+    height:100%;
+  }
+}
+@media(max-width:500px)
+{
+  .content{
+    height:80vw;
+    margin-top: 2vh;
+    font-size: 3.1rem;
+    width:100vw;  
+}
+  .landing{
+    font-size:2.6rem;
+  }
+  .dev{
+    font-size:2.5rem;
+    margin-top: 3vh;
+    text-align: center;
+  }
+  .bgvid{
+    filter:blur(4px);
+  }
+  .title{
+    font-size: 2rem;
+    padding-top: 3vh;
+  }
+  .container{
+    height: max-content;
+    gap:5vh;
+  }
+  .project{
+    flex-direction:column;
+    height: max-content;
+  }
+  .pro1{
+    width:90vw;
+    height: 30vh;
+  }
+  .pro2{
+    width:90vw;
+    text-align: center;
+    font-size: medium;
+  }
+  .project2{
+    flex-direction: column;
+    height:80vh ;
+  }
+  .proj{
+    width:90vw;
+    height: 30vh;
+  }
+  .aboutme{
+    justify-content: space-around;
+    flex-direction:column;
+    height: 80vh;
+  }
+  .about{
+    width:90vw;
+    font-size: 0.9em;
+    text-align: center;
+
+  }
+  .aboutpic{
+    height:170px;
+    width:170px;
+
+  }
+}
